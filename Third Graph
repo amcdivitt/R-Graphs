@@ -1,1 +1,4 @@
+
+ggplot(data = mydata, aes(x = Year, y = Title)) + geom_line() yes ggplot(data = mydata, aes(x = Year, y = Format)) + geom_line()
+
 https://cloud.githubusercontent.com/assets/5747644/4375137/a897ad78-4339-11e4-9707-1c0dcc353a67.png
