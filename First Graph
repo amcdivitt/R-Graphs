@@ -1,1 +1,5 @@
+
+
+ggplot(data = mydata, aes(x = Year, y = Type)) + geom_line()
+
 https://cloud.githubusercontent.com/assets/5747644/4375028/ede424b6-4338-11e4-907e-1deb19400537.png
