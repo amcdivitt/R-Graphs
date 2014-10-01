@@ -4,10 +4,26 @@ library (dplyr)
 library(ggplot2)
 library(tidyr)
 
-mydata_long <- mydata %>%
-  gather(Title, Year, Format, Origin, Type)
+mydata %>%
+  filter(Type=="fantasy", Format=="coin-operated")
   
-  mydata_long <- mydata %>%
-  filter(Type == "space")
+  mydata %>%
+  arrange(Title)
   
-  ggplot(data = mydata, aes(x = Year, stat="space")) + geom_bar()
+  mydata %>%
+  group_by(Year) %>% 
+  summarize(Games_Per_Year = n()) %>%
+  arrange(Games_Per_Year)
+  
+  mydata <- read.csv("~/Desktop/Fall 2014/Programming 2014/test.csv", stringsAsFactors=FALSE, header=TRUE)
+mydata %>%
+  group_by(Type) %>%
+  summarize(First_Instance= min(Year))
+  
+  mydata %>%
+  group_by(Year) %>% 
+  summarize(Games_Per_Year = n()) %>%
+  arrange(Games_Per_Year)
+  
+  mydata %>%
+  group_by(Type) %>% summarize(Type_Count = n()) %>% arrange(desc(Type_Count))
