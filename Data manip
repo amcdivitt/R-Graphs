@@ -27,3 +27,7 @@ mydata %>%
   
   mydata %>%
   group_by(Type) %>% summarize(Type_Count = n()) %>% arrange(desc(Type_Count))
+
+mydata %>%
+  group_by(Type) %>%
+  summarize(Last_Instance= max(Year))
