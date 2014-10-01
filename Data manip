@@ -1,0 +1,13 @@
+mydata <- read.csv("~/Desktop/Fall 2014/Programming 2014/test.csv", stringsAsFactors=FALSE, header=TRUE)
+library (dplyr)
+
+library(ggplot2)
+library(tidyr)
+
+mydata_long <- mydata %>%
+  gather(Title, Year, Format, Origin, Type)
+  
+  mydata_long <- mydata %>%
+  filter(Type == "space")
+  
+  ggplot(data = mydata, aes(x = Year, stat="space")) + geom_bar()
