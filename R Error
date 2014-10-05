@@ -1,63 +1,3 @@
-> install.packages("rgdal", type = "source")
-trying URL 'http://cran.rstudio.com/src/contrib/rgdal_0.9-1.tar.gz'
-Content type 'application/x-gzip' length 1624496 bytes (1.5 Mb)
-opened URL
-==================================================
-downloaded 1.5 Mb
-
-* installing *source* package ‘rgdal’ ...
-** package ‘rgdal’ successfully unpacked and MD5 sums checked
-configure: CC: clang
-configure: CXX: clang++
-configure: rgdal: 0.9-1
-checking for /usr/bin/svnversion... yes
-configure: svn revision: 518
-configure: gdal-config: gdal-config
-checking gdal-config usability... 
-./configure: line 2119: gdal-config: command not found
-no
-Error: gdal-config not found
-The gdal-config script distributed with GDAL could not be found.
-If you have not installed the GDAL libraries, you can
-download the source from  http://www.gdal.org/
-If you have installed the GDAL libraries, then make sure that
-gdal-config is in your path. Try typing gdal-config at a
-shell prompt and see if it runs. If not, use:
- --configure-args='--with-gdal-config=/usr/local/bin/gdal-config'
-with appropriate values for your installation.
-
-ERROR: configuration failed for package ‘rgdal’
-* removing ‘/Library/Frameworks/R.framework/Versions/3.1/Resources/library/rgdal’
-Warning in install.packages :
-  installation of package ‘rgdal’ had non-zero exit status
-
-The downloaded source packages are in
-	‘/private/var/folders/1t/63nlmnfd7x92ns6l1xgd5mvm0000gn/T/RtmpRkSC9a/downloaded_packages’
-> install.packages("rgeos", type = "source")
-trying URL 'http://cran.rstudio.com/src/contrib/rgeos_0.3-8.tar.gz'
-Content type 'application/x-gzip' length 245688 bytes (239 Kb)
-opened URL
-==================================================
-downloaded 239 Kb
-
-* installing *source* package ‘rgeos’ ...
-** package ‘rgeos’ successfully unpacked and MD5 sums checked
-configure: CC: clang
-configure: CXX: clang++
-configure: rgeos: 0.3-4
-checking for /usr/bin/svnversion... yes
-configure: svn revision: 460
-checking geos-config usability... 
-./configure: line 2056: geos-config: command not found
-no
-configure: error: geos-config not usable
-ERROR: configuration failed for package ‘rgeos’
-* removing ‘/Library/Frameworks/R.framework/Versions/3.1/Resources/library/rgeos’
-Warning in install.packages :
-  installation of package ‘rgeos’ had non-zero exit status
-
-The downloaded source packages are in
-	‘/private/var/folders/1t/63nlmnfd7x92ns6l1xgd5mvm0000gn/T/RtmpRkSC9a/downloaded_packages’
 > library(sp)
 > library(rgdal)
 Error in library(rgdal) : there is no package called ‘rgdal’
@@ -66,5 +6,5 @@ Error in library(rgeos) : there is no package called ‘rgeos’
 > library(maptools)
 > library(ggmap)
 > library(ggplot2)
-> map_sp <- readOGR("~/Desktop/R Mapping/nhgis-shp/US_county_1870.shp")
+> map_sp <- readOGR("data/nhgis-shp/", "state_1850")
 Error: could not find function "readOGR"
